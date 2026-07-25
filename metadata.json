@@ -1,0 +1,6 @@
+{
+  "name": "LeadFlow",
+  "description": "Lead Generation and handling platform featuring client intake landing, Express-session authentication with Formik, Admin CRM Dashboard with live lead search, budget and status filters, lead state updates, and network/server 404 error boundaries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
