@@ -7,11 +7,13 @@ LeadFlow is a high-performance Lead Generation and Management CRM application bu
 ## 🌟 Key Features
 
 ### 1. Client Intake Landing Page
+
 - **Formik & Yup Schema Validation**: Seamless intake form with live error feedback, work email validation, and required field checks.
 - **Budget Tier Categorization**: Dynamic tiering ($5k–$10k Growth Tier, $10k–$50k Pro Tier, $50k+ Enterprise Tier).
 - **Responsive Hero & Product Showcase**: High-contrast, elegant presentation highlighting core CRM capabilities.
 
 ### 2. Admin CRM Dashboard
+
 - **Live Lead Matrix**: Searchable, filterable lead grid with real-time state modification (New, Contacted, Closed).
 - **Team Agent Assignment**: Assign incoming leads directly to registered admin users.
 - **Real-Time Polling & Live Sync**: Optional 4-second automatic sync toggle to reflect database updates across sessions.
@@ -19,11 +21,13 @@ LeadFlow is a high-performance Lead Generation and Management CRM application bu
 - **Custom Activity Logging**: Append custom timeline notes to lead profiles.
 
 ### 3. Express Session Auth Engine
+
 - **Session-Based Authentication**: Secure cookie sessions managed via `express-session`.
 - **Hybrid Storage Engine**: Automatic fallback to `MemoryStore` when MongoDB is offline, or `MongoStore` via `connect-mongo` when connected.
 - **User Roles & Credentials**: Support for default admin access (`admin@leadflow.io`) and user registration.
 
 ### 4. Health Diagnostics & Error Boundaries
+
 - **System Error Boundary**: React `ErrorBoundary` wrapper capturing client crashes with detailed status reports.
 - **Backend Health Diagnostic**: `/api/health` endpoint pinging server state, session status, and MongoDB connectivity.
 - **Simulated 404 / Network Test**: Built-in test trigger to inspect error views and recovery workflows.
@@ -67,31 +71,41 @@ LeadFlow is a high-performance Lead Generation and Management CRM application bu
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - **Node.js**: v18.x or higher
 - **npm** or **bun**
 
 ### 1. Installation
+
 Clone the repository and install dependencies:
+
 ```bash
 npm install
 ```
 
 ### 2. Environment Setup
+
 Create a `.env` file based on `.env.example`:
+
 ```env
 MONGODB_URI="mongodb://localhost:27017/leadflow"
 SESSION_SECRET="leadflow-secure-session-secret-2026"
 ```
 
 ### 3. Running in Development Mode
+
 Start the Node.js Express server with Vite middleware:
+
 ```bash
 npm run dev
 ```
+
 Access the application at `http://localhost:3000`.
 
 ### 4. Building for Production
+
 Compile static assets with Vite and start the production Express server:
+
 ```bash
 npm run build
 npm start
@@ -102,6 +116,7 @@ npm start
 ## 📡 API Endpoints Reference
 
 ### Authentication Routes (`/api/auth`)
+
 | Method | Endpoint | Description |
 | text | text | text |
 | `GET` | `/api/auth/me` | Fetch active session user info |
@@ -111,6 +126,7 @@ npm start
 | `GET` | `/api/auth/users` | List all registered users (for lead assignment) |
 
 ### Leads Pipeline Routes (`/api/leads`)
+
 | Method | Endpoint | Description |
 | text | text | text |
 | `GET` | `/api/leads` | List leads (supports `search`, `status`, `budget`, `sortBy` queries) |
@@ -121,6 +137,7 @@ npm start
 | `DELETE` | `/api/leads/:id` | Delete a lead from the database |
 
 ### System Diagnostics
+
 | Method | Endpoint | Description |
 | text | text | text |
 | `GET` | `/api/health` | Inspect Express session store and MongoDB connection status |
